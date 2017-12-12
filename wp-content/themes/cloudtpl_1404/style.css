@@ -1,0 +1,634 @@
+@charset "utf-8";
+/*
+Theme Name: cloudtpl_1404
+Theme URI: http://c-tpl.com/
+Description: cloudtpl_1404
+Version: 1.0
+Author: Cloud template
+Author URI: http://c-tpl.com/
+Tags: simple
+
+	Cloud template v1.0
+	 http://c-tpl.com/
+
+	This theme was designed and built by Cloud template,
+	whose blog you will find at http://c-tpl.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+/* =Reset default browser CSS.
+Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a img {border: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body{
+font:80%/1.5 "Lucida Sans Unicode", "Lucida Grande", Arial, "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック",sans-serif;
+color:#ccc;
+-webkit-text-size-adjust: none;
+background:#222;
+}
+
+
+/* リンク設定
+------------------------------------------------------------*/
+a{
+margin:0;
+padding:0;
+text-decoration:none;
+outline:0;
+vertical-align:baseline;
+background:transparent;
+font-size:100%;
+color:#FAF9F9;
+}
+
+a:hover, a:active{
+-webkit-transition:opacity 1s;-moz-transition:opacity 1s;-o-transition:opacity 1s;
+outline: none;
+color:#999;
+}
+
+
+/**** Clearfix ****/
+nav .panel:after, nav#mainNav:after, .newsTitle:after, .bg:after,.post:after{content:""; display: table;clear: both;}
+nav .panel,nav#mainNav,.newsTitle,.bg, .post{zoom: 1;}
+
+
+/* フォーム
+------------------------------------------------------------*/
+input[type="text"], textarea{
+vertical-align:middle;
+max-width:90%;
+line-height:30px;
+height:30px;
+padding:1px 5px;
+border:1px solid #d4d4d7;
+border-radius:3px;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+font-size:100%;
+color:#555;
+background:#fcfcfc;
+}
+
+textarea{
+height:auto;
+line-height:1.5;
+}
+
+input[type="submit"],input[type="reset"],input[type="button"]{
+padding:3px 10px;
+background: #2a588b;
+background: -moz-linear-gradient(top, #2a588b 0%, #214a78 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2a588b), color-stop(100%,#214a78));
+background: -webkit-linear-gradient(top, #2a588b 0%,#214a78 100%);
+background: -o-linear-gradient(top, #2a588b 0%,#214a78 100%);
+background: -ms-linear-gradient(top, #2a588b 0%,#214a78 100%);
+background: linear-gradient(to bottom, #2a588b 0%,#214a78 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a588b', endColorstr='#214a78',GradientType=0 );
+border:0;
+border-radius:3px;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+line-height:1.5;
+font-size:100%;
+color:#fff;
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover{
+background: #2a588b;
+background: -moz-linear-gradient(top, #214a78 0%, #2a588b 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#214a78), color-stop(100%,#2a588b));
+background: -webkit-linear-gradient(top, #214a78 0%,#2a588b 100%);
+background: -o-linear-gradient(top, #214a78 0%,#2a588b 100%);
+background: -ms-linear-gradient(top, #214a78 0%,#2a588b 100%);
+background: linear-gradient(to bottom, #214a78 0%,#2a588b 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#214a78', endColorstr='#2a588b',GradientType=0 );
+}
+
+*:first-child+html input[type="submit"]{padding:3px;}
+
+
+/* レイアウト
+------------------------------------------------------------*/
+#wrapper, .inner{
+margin:0 auto;
+width:960px;
+}
+
+#header{
+overflow:hidden;
+background: #E4E0D4;
+}
+
+#content{
+float:left;
+width:710px;
+padding:30px 0;
+}
+
+
+
+#sidebar{
+float:right;
+width:225px;
+padding:30px 0;
+}
+
+#footer{
+clear:both;
+padding-top:20px;
+border-bottom:1px solid #ccc;
+background:#B08B5E;
+} 
+
+
+/* ヘッダー
+*****************************************************/
+#header .bg{background:#000;}
+
+
+/* サイト説明文 + 住所
+----------------------------------*/
+#header h1,#header p{
+float:left;
+padding:3px 0;
+color: #ccc;
+font-size:80%;
+font-weight:normal;
+}
+
+#header p{
+float:right;
+}
+
+
+/* ロゴ (サイトタイトル)
+----------------------------------*/
+#header h2{
+clear:both;
+float:left;
+padding:30px 0;
+color: #515151;
+font-size:160%;
+font-weight:bold;
+}
+
+/* サブナビゲーション
+----------------------------------*/
+#header ul{
+padding-top:40px;
+float:right;
+}
+
+#header ul li{
+display:inline;
+margin-left:10px;
+font-size:90%;
+}
+
+#header ul li a{
+padding-left:10px;
+color:#000;
+background:url(images/arrowSub.png) no-repeat 0 50%;
+}
+
+#header ul li a:hover{background-position:3px 50%;}
+
+
+/* メインメニュー
+------------------------------------------------------------*/
+nav#mainNav{
+clear:both;
+position:relative;
+z-index:200;
+background:#B08B5E;
+}
+
+nav#mainNav ul li{
+float: left;
+position: relative;
+border-right:1px solid #fff;
+}
+
+nav#mainNav ul li:first-child{border-left:1px solid #fff;}
+
+nav#mainNav ul li a{
+display: block;
+text-align: center;
+float:left;
+color:#E4E0D4;
+height:40px;
+line-height:40px;
+padding:15px 40px 5px;
+
+}
+
+nav#mainNav ul li a span,nav#mainNav ul li a strong{
+display:block;
+font-size:90%;
+line-height:1.4;
+}
+
+nav#mainNav ul li a span{
+font-size:70%;
+color:#ccc;
+
+}
+
+nav#mainNav ul li.current-menu-item a, nav#mainNav ul li a:hover, nav#mainNav ul li a:active, nav#mainNav ul li.current-menu-parent a{
+background:#785F40;
+color:#E4E0D4;
+}
+
+nav#mainNav ul li.current-menu-item a span, nav#mainNav ul li a:hover span{
+color:#E4E0D4;
+}
+
+nav#mainNav ul ul{width:160px;}
+
+nav#mainNav ul li ul{display: none;}
+
+nav#mainNav ul li:hover ul{
+display: block;
+position: absolute;
+top:60px;
+left:-2px;
+z-index:500;
+background:#B08B5E;
+}
+
+nav#mainNav ul li li{
+padding:0 0 0 10px;
+margin:0 0 0 2px;
+float: none;
+height:40px;
+line-height:40px;
+width:160px;
+background:#785F40;
+border:0;
+border-bottom:1px solid #fff;
+}
+
+nav#mainNav ul li li:first-child{border-left:0;}
+
+nav#mainNav ul li li a{
+width:100%;
+height:40px;
+padding:0;
+line-height:40px;
+font-size:95%;
+text-align:left;
+color:#E4E0D4;
+}
+
+nav#mainNav ul li li a span{padding:0 10px;}
+
+nav#mainNav ul li li a:hover,nav#mainNav ul li li.current-menu-item a{color:#fff;
+text-decoration:none;
+background:#785F40;
+color:#FDF9EB;}
+
+nav#mainNav ul li:hover ul li:last-child{border:0;}
+
+/* トップページ　メイン画像
+----------------------------------*/
+#mainImg{
+clear:both;
+margin-top:25px;
+line-height:0;
+text-align:center;
+z-index:0;
+}
+
+.post{
+margin:0 0 20px 0;
+padding:10px;
+border:0px solid #ccc;
+}
+
+
+/* タイポグラフィ
+*****************************************************/
+h2.title{
+clear:both;
+margin:30px 0 0;
+padding:7px 10px;
+font-size:110%;
+border:0px solid #dadada;
+border-bottom:0;
+background:url(images/border.png) no-repeat 0 100%;
+}
+
+h2.first{margin-top:0;}
+
+.dateLabel{
+margin:0 0 10px;
+text-align:right;
+font:italic 1em "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.post p{padding-bottom:15px;}
+
+.post ul{margin: 0 0 10px 10px;}
+
+.post ul li{
+margin-bottom:5px;
+padding-left:15px;
+background:url(images/bullet.png) no-repeat 0 8px;
+}
+
+.post ol{margin: 0 0 10px 30px;}
+
+.post ol li{list-style:decimal;}
+
+.post h1{
+margin:20px 0;
+padding:5px 0;
+font-size:150%;
+color: #efefef;
+border-bottom:1px solid #efefef;
+}
+
+.post h2{
+margin:10px 0;
+padding-bottom:2px;
+font-size:130%;
+font-weight:normal;
+color: #333;
+border-bottom:2px solid #515151;
+}
+
+.post h3{
+margin:10px 0;
+font-size:120%;
+font-weight:normal;
+color:#214a78;
+border-bottom:1px solid #515151;
+}
+
+.post blockquote {
+clear:both;
+padding:10px 0 10px 15px;
+margin:10px 0 25px 30px;
+border-left:5px solid #ccc;
+}
+ 
+.post blockquote p{padding:5px 0;}
+
+.post table{
+border: 1px #214a78 solid;
+border-collapse: collapse;
+border-spacing: 0;
+margin:10px 0 20px;
+}
+
+.post table th{
+padding:7px 10px 7px 5px;
+border: #214a78 solid;
+border-width: 0 0 1px 1px;
+font-weight:bold;
+color:#fff;
+background:#214a78;
+}
+
+.post table td{
+padding:7px 5px;
+border: 1px #214a78 solid;
+border-width: 0 0 1px 1px;
+background:#fff;
+}
+
+.post dt{font-weight:bold;}
+
+.post dd{padding-bottom:10px;}
+
+.post img{max-width:100%;height:auto;}
+
+img.aligncenter {
+display: block;
+margin:5px auto;
+}
+
+img.alignright, img.alignleft{
+padding:4px;
+margin:0 0 2px 7px;
+display:inline;
+}
+
+img.alignleft{margin: 0 7px 2px 0;}
+
+.alignright{float:right;}
+.alignleft{float: left;}
+
+
+
+/* サイドバー　ウィジェット
+*****************************************************/
+section.widget, .widgetInfo{
+margin: 0 0 20px;
+padding: 10px 7px;
+border:0px solid #dadada;
+color:#FAF9F9;
+}
+
+#banners img{
+max-width:225px;
+height:auto;
+padding-bottom:10px;
+}
+
+section.widget h3{
+clear:both;
+margin:0 0 10px;
+padding:5px 0;
+font-size:100%;
+font-weight:normal;
+color: #FAF9F9;
+border-bottom:1px solid #ccc;
+}
+
+section.widget a{
+display:block;
+padding:3px 0 3px 13px;
+text-decoration:underline;
+background:url(images/arrow.png) no-repeat 0 50%;
+    color: #FAF9F9;
+}
+
+section.widget a:hover{
+text-decoration:none;
+background-position: 3px 50%;
+}
+
+#searchform input[type="text"]{
+line-height:1.7;
+height:24px;
+width:100px;
+vertical-align:bottom;
+}
+
+
+/* お知らせ　
+-------------*/
+.newsTitle{
+clear:both;
+margin:0 0 20px;
+padding:5px 0;
+font-size:100%;
+color: #FAF9F9;
+border-bottom:1px solid #ccc;
+}
+
+.newsTitle h3{
+float:left;
+font-weight:normal;
+}
+
+.newsTitle p{
+float:right;
+padding:0 0 0 10px;
+font-size:.8em;
+background:url(images/arrow.png) no-repeat 0 50%;
+}
+
+.news p{
+clear:both;
+padding-bottom:2px;
+border-bottom: 1px solid #ccc;
+}
+
+.news p:last-child{border:0;}
+
+.news p a{
+display:block;
+padding:5px 0;
+color:#FAF9F9;
+font-style:italic;
+font:italic 110% "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.news a span{
+color:#ccc;
+font:normal 90% Arial, 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;
+}
+
+.news span{padding-left:10px;}
+
+.news a:hover span{color:#777;}
+
+
+
+/* フッター
+*****************************************************/
+#footer ul{
+padding-bottom:10px;
+}
+
+#footer ul li{
+display:inline-block;
+vertical-align:text-top;
+text-align:left;
+padding:5px 0;
+margin-right:60px;
+background:url(images/arrow.png) no-repeat 0 12px;
+}
+
+#footer ul li	a{
+display:block;
+padding:0 0 0 12px;
+overflow:hidden;
+color:#ccc;
+}
+
+#footer ul li	a:hover{text-decoration:underline;}
+
+#footer ul li li{
+display:block;
+padding:0;
+margin:0 0 0 10px;
+background-position:0 5px;
+}
+
+
+*:first-child+html #footer ul li{display:inline;}
+*:first-child+html #footer ul ul,*:first-child+html #footer ul li li a,*:first-child+html #footer ul li li{display:none;}
+
+#copyright{
+clear:both;
+padding:10px;
+text-align:center;
+font-size:75%;
+zoom:1;
+color:#fff;
+background:#000;
+}
+
+
+/* page navigation
+------------------------------------------------------------*/
+.pagenav{
+clear:both;
+width: 100%;
+height: 30px;
+margin: 5px 0 20px;
+}
+
+.prev{float:left}
+
+.next{float:right;}
+
+#pageLinks{
+clear:both;
+color:#2a588b;
+text-align:center;
+}
+
+
+/* トップページ 最新記事3件
+------------------------------------------------------------*/
+.thumbWrap{
+width:735px;
+margin:20px -25px 20px 0;
+}
+
+.thumbWrap li{
+float:left;
+width: 220px;
+margin:0 25px 0 0;
+padding:2px 0 40px;
+background:none;
+}
+
+/* 最新記事リンク */
+ul.thumb h3{
+margin-top:10px;
+padding:1px;
+font-weight:normal;
+font-size:100%;
+text-align:center;
+background:#ccc;
+border:1px solid #777;
+}
+
+ul.thumb h3 span{
+display:block;
+padding:2px 3px;
+background:#000;
+}
+
+ul.thumb h3 a{color:#ccc;}
+
+ul.thumb h3:hover span{background:#3a3832;
+color:#fff}
